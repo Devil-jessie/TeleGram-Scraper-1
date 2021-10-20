@@ -22,7 +22,7 @@ def banner():
 {re} ╩ {cy}└─┘┴─┘└─┘{re}╚═╝  ╚═╝{cy}└─┘┴└─┴ ┴┴  └─┘┴└─
 
             version : 1.0
-        youtube.com/theunknon
+hu
         """)
 
 cpass = configparser.RawConfigParser()
@@ -100,7 +100,7 @@ n = 0
 for user in users:
     n += 1
     if n % 50 == 0:
-	    time.sleep(900)
+	    time.sleep(5)
 	    try:
 	        print ("Adding {}".format(user['id']))
 	        if mode == 1:
@@ -112,8 +112,8 @@ for user in users:
 	        else:
 	            sys.exit(re+"[!] Invalid Mode Selected. Please Try Again.")
 	        client(InviteToChannelRequest(target_group_entity,[user_to_add]))
-	        print(gr+"[+] Waiting for 60-180 Seconds...")
-	        time.sleep(random.randrange(60, 180))
+	        print(gr+"[+] Waiting for 60-120 Seconds...")
+	        time.sleep(random.randrange(60, 120))
 	    except PeerFloodError:
 	        print(re+"[!] Getting Flood Error from telegram. \n[!] Script is stopping now. \n[!] Please try again after some time.")
 	    except UserPrivacyRestrictedError:
